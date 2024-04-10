@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux'
-import { useEffect, useState } from "react";
+
 
 const NavBar = () => {
 
     const numberFavMoive = useSelector(state => state.allFavMovie.NumberFavMovie)
-    const [numberFav,setNumberFav] = useState()
-
-    // useEffect(()=>{
-    //     setNumberFav(numberFavMoive)
-    // },[numberFavMoive])
 
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -51,7 +46,7 @@ const NavBar = () => {
 
                 <li className="nav-item">
                     <Link className="nav-link" to="/fav-movies">
-                        Fav ({numberFavMoive})
+                    fav({ numberFavMoive })
                     </Link>
                 </li>
             </ul>
@@ -64,5 +59,5 @@ const NavBar = () => {
 }
 
 
-export default NavBar
+export default NavBar;
 
