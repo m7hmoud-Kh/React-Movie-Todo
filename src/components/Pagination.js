@@ -1,6 +1,6 @@
 const Pagination = ({totalPagesNumber,pageNumber,jumpTo,decrement,increment}) => {
     return ( <nav aria-label="Page navigation example" className="nav-pag">
-    <ul class="pagination">
+    <ul className="pagination">
         <li className="page-item"><button className="page-link" onClick={() => decrement()}>Previous</button>
         </li>
         {

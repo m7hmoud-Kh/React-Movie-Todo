@@ -1,15 +1,20 @@
-import axios, { all } from "axios";
+import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import '../assets/css/Movies.css';
 import Pagination from "../components/Pagination";
+
 const Movies = () => {
 
     const APIKEY = "06a219211389dcc0bed021c3b48d71af"
+
+
+
     const [movies, setMovies] = useState([])
     const [pageNumber, setPageNumber] = useState(1)
     const [allPages, setAllPages] = useState(1)
     const searchEl = useRef()
+
     let totalPagesNumber = []
     for (let i = 2; i < allPages; i++) {
         totalPagesNumber.push(i)
@@ -68,7 +73,7 @@ const Movies = () => {
             {movies.map(movie => {
                 return (
                 <div className="col-lg-3 mt-2 mb-2"  key={movie.id}>
-                        <MovieCard  movie={movie}/>
+                        <MovieCard  movie={movie} key={movie.id}/>
                 </div>
                 )
             })}

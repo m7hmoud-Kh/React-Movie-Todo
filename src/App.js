@@ -11,6 +11,7 @@ import Register from './Pages/Register';
 import Todo from './Pages/Todo';
 import Movies from './Pages/Movies';
 import MovieDetails from './Pages/MovieDetails';
+import FavMovies from './Pages/FavMovies';
 function App() {
   return (
 
@@ -24,6 +25,7 @@ function App() {
               <Route path='todo' element={<Todo/>}/>
               <Route path='movies'  element={<Movies/>}/>
               <Route path='movies/:id' element={<MovieDetails/>}/>
+              <Route path='fav-movies' element={<FavMovies/>} />
               <Route path='*' element={<NotFound/>} />
             </Route>
           </Routes>
